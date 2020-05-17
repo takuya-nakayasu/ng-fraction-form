@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { Fraction } from 'src/app/entity/fraction';
 
 @Component({
   selector: 'app-fraction-input',
@@ -7,6 +8,9 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./fraction-input.component.scss'],
 })
 export class FractionInputComponent implements OnInit {
+  @Input() fraction: Fraction = new Fraction();
+  @Output() fractionChange = new EventEmitter<Fraction>();
+
   public fractionFormGroup: FormGroup;
   public numeratorControl: FormControl;
   public denominatorControl: FormControl;
