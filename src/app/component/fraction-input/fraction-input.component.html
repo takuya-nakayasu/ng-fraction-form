@@ -1,0 +1,11 @@
+<form [formGroup]="fractionFormGroup">
+  <div class="fraction-group">
+    <mat-form-field>
+      <input matInput placeholder="分子" formControlName="numerator">
+    </mat-form-field>
+    <div>/</div>
+    <mat-form-field>
+      <input matInput placeholder="分母" formControlName="denominator">
+    </mat-form-field>
+  </div>
+</form>
