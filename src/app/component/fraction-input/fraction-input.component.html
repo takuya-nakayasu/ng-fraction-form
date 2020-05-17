@@ -1,11 +1,11 @@
 <form [formGroup]="fractionFormGroup">
   <div class="fraction-group">
     <mat-form-field>
-      <input matInput placeholder="分子" formControlName="numerator" [(ngModel)]="fraction.numerator">
+      <input matInput class="input" placeholder="分子" formControlName="numerator" [(ngModel)]="fraction.numerator">
     </mat-form-field>
     <div class="split">/</div>
     <mat-form-field>
-      <input matInput placeholder="分母" formControlName="denominator" [(ngModel)]="fraction.denominator">
+      <input matInput class="input" placeholder="分母" formControlName="denominator" [(ngModel)]="fraction.denominator">
     </mat-form-field>
   </div>
 </form>
