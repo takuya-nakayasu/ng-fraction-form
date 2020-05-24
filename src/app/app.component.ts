@@ -14,8 +14,13 @@ import { Fraction } from './entity/fraction';
 export class AppComponent implements OnInit {
   public fractionParentFormGroup: FormGroup;
   public fraction: Fraction;
+  public fractionList: Fraction[];
 
   public ngOnInit() {
-    this.fraction = new Fraction();
+    this.fractionList = [
+      new Fraction(2, 3),
+      new Fraction(1, 4),
+      new Fraction(2, 5),
+    ];
   }
 }

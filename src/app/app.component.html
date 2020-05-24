@@ -2,7 +2,8 @@
   <mat-card class="form-card">
     <div>分数</div>
     <!-- 分数コンポーネント -->
-    <app-fraction-input [(fraction)]="fraction"></app-fraction-input>
-    {{fraction | json}}
+    <ng-container *ngFor="let fraction of fractionList; let i = index">
+      <app-fraction-input [(fraction)]="fractionList[i]"></app-fraction-input>
+    </ng-container>
   </mat-card>
 </div>

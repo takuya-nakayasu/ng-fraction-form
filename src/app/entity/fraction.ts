@@ -10,8 +10,8 @@ export class Fraction {
   // 分母
   public denominator: number;
 
-  constructor() {
-    this.numerator = undefined;
-    this.denominator = undefined;
+  constructor(numerator?: number, denominator?: number) {
+    this.numerator = numerator;
+    this.denominator = denominator;
   }
 }
