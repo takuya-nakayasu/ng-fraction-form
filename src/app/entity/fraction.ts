@@ -1,3 +1,9 @@
+/**
+ * 分数オブジェクト
+ *
+ * @export
+ * @class Fraction
+ */
 export class Fraction {
   // 分子
   public numerator: number;

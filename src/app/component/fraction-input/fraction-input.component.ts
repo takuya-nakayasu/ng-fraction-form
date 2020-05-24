@@ -2,6 +2,13 @@ import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Fraction } from 'src/app/entity/fraction';
 
+/**
+ * 分数入力用コンポーネント
+ *
+ * @export
+ * @class FractionInputComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-fraction-input',
   templateUrl: './fraction-input.component.html',
@@ -12,7 +19,9 @@ export class FractionInputComponent implements OnInit {
   @Output() fractionChange = new EventEmitter<Fraction>();
 
   public fractionFormGroup: FormGroup;
+  // 分子
   public numeratorControl: FormControl;
+  // 分母
   public denominatorControl: FormControl;
 
   constructor(private fb: FormBuilder) {}
@@ -27,6 +36,12 @@ export class FractionInputComponent implements OnInit {
     ) as FormControl;
   }
 
+  /**
+   * reactive formの設定
+   *
+   * @private
+   * @memberof FractionInputComponent
+   */
   private createForm() {
     this.fractionFormGroup = this.fb.group({
       numerator: ['', []],
